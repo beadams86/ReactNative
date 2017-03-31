@@ -48,12 +48,11 @@ var PageOne = React.createClass({
         source={require('./images/login-background.png')}
         style={styles.container}>
 
-
-      
-        
+        <Text style={styles.header}>Get Your Life in Order</Text>
+        <Text style={styles.subheader}>Store all your files in a single, secure place, to be released to the person of your choice</Text>
         <TouchableOpacity onPress={this._handlePress}>
-          <View style={{paddingVertical: 20, paddingHorizontal: 20, backgroundColor: 'white'}}>
-            <Text style={styles.welcome}>Go to page two</Text>
+          <View style={{paddingVertical: 1, paddingHorizontal: 60, backgroundColor: 'white'}}>
+            <Text style={styles.welcome}>Get Started</Text>
           </View>
         </TouchableOpacity>
 
@@ -69,7 +68,7 @@ var PageTwo = React.createClass({
 
   render() {
     return (
-      <Image source={require('./images/login-background.png')}
+      <Image source={require('./images/login-background2.png')}
         style={styles.container}>
         <Text style={styles.welcome}>This is page two!</Text>
         <TouchableOpacity onPress={this._handlePress}>
@@ -111,16 +110,35 @@ const styles = StyleSheet.create({
     width: undefined,
     height: undefined,
     backgroundColor:'transparent',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
-    paddingHorizontal:20,
-    paddingVertical:20
+    paddingHorizontal:30,
+    paddingVertical:30,
+    resizeMode: 'cover'
   },
-  welcome: {
+  header: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
-    color: 'white',
+    fontWeight: '700',
+    margin: 0,
+    color:"#e5bdbd",
+  }
+  ,
+  subheader: {
+    fontSize: 14,
+    textAlign: 'center',
+    fontWeight: '300',
+    marginBottom: 30,
+    color:"#de9c9c",
+  }
+  ,
+  welcome: {
+    fontSize: 26,
+    textAlign: 'center',
+    fontWeight: '700',
+    margin: 15,
+    color:"#9d3c3c",
+    borderRadius: 15,
   }
 });
 

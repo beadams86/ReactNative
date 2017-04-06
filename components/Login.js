@@ -7,6 +7,7 @@ import {
   Image,
   Navigator,
   TouchableOpacity,
+  TextInput,
 } from 'react-native';
 
 import { TabNavigator } from 'react-navigation';
@@ -23,51 +24,51 @@ const styles = StyleSheet.create({
 	 width:  null,
 	 justifyContent: 'flex-end',
 	 alignItems: 'center',
+   resizeMode:'cover',
   },
 
   introContent:{
-  	alignItems:'center',
-  	padding:30,
-
+  	flexDirection:'row',
+    alignSelf:'stretch',
   },
 
-  headerText: {
-  	color:'#333',
-  	fontSize:26,
-  	fontWeight:'700',
-  	marginBottom:15,
-  },
 
-  subheader: {
-  	color:'#666',
-  	fontSize:16,
-  	fontWeight:'300',
-  	alignItems:'center',
-  	marginBottom:30,
-
-  },
   textLink:{
   	padding:30,
   },
-  skipintro: {
-  	color:'#fff'
+  inputWrap:{
+    flex:1,
+    marginVertical:10,
+    height:40,
+    backgroundColor:'transparent'
+  },
+  input:{
+    flex:1,
+    paddingHorizontal:10,
+    backgroundColor:"#fff",
   }
 
 })
 export default class Login extends Component{
 	render(){
 		return(
-			 	<View style={styles.container}>
+			 	 <View style={styles.container}>
+
+              <Image source={require('../images/login.png')} style={styles.backgroundImage}>
 
       				
-      						<View style={styles.introContent}>
+      						<View>
   								<Text style={styles.headerText}>Login</Text>
-        							<Text style={styles.subheader}>Store important files in a single secure location</Text>
+        					<TextInput
+                  placeholder="Username"
+                  style={styles.input}
+                  underlineColorAndroid="transparent"
+                  />
 	        								<TouchableOpacity onPress={this.pop} style={styles.textLink}>
-	          										<Text style={styles.skipintro}>Skip Intro</Text>
+	          										<Text style={styles.skipintro}>I'm not registered yet</Text>
 	        								</TouchableOpacity>
       						</View>
-      				
+      				</Image>
     			</View>
 
 			);

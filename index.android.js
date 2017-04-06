@@ -64,7 +64,7 @@ var TestProject = React.createClass({
     return (
      
 
-      <Swiper style={styles.wrapper} showsButtons={true}>
+      
           <Navigator initialRoute={{
             id: 'Onboard'
           }}
@@ -73,25 +73,7 @@ var TestProject = React.createClass({
           }
           />
 
-         <Image
-        source={require('./images/onboard-2.png')}
-        style={styles.container}>
-
-          <Text style={styles.header}>Store all important Documents, Account Information and Passwords</Text>
-        <Text style={styles.subheader}>In our guaranteed secure, encrypted LifePreserver Vault</Text>
-        <TouchableOpacity onPress={this._handlePress}>
-          <View style={{paddingVertical: 1}}>
-            <Text style={styles.welcome}>Skip Intro</Text>
-          </View>
-        </TouchableOpacity>
-        </Image>
-
-        <View style={styles.slide3}>
-          <Text style={styles.text}>And simple</Text>
-        </View>
-      </Swiper>
-    )
-  },
+     )},
 
     navigatorRenderScene(route,navigator){
       _navigator = navigator;
